@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buildweb.io - Create SEO-Perfect Website Easily with AI-Powered Technology</title>
+    <meta name="description"
+          content="Create SEO friendly websites quickly and easily with our AI-Powered website builder. Get technical SEO best practices and highest possible page speed, automated content creation" />
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+
+
+
+</head>
+
+<style>
+    *,
+    :after,
+    :before {
+        box-sizing: border-box;
+        border: 0 solid #e5e5e5;
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        font-weight: 100 900;
+        font-display: swap;
+        src: url('/assets/font/Inter.woff2') format("woff2")
+    }
+
+
+    @font-face {
+        font-family: Source Code Pro;
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/fonts/Source-Code-Pro-Regular.woff2) format("woff2")
+    }
+
+    @font-face {
+        font-family: Optimistic Display;
+        src: url(https://beta.reactjs.org/fonts/Optimistic_Display_W_Lt.woff2) format("woff2");
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap
+    }
+
+    @font-face {
+        font-family: Optimistic Display;
+        src: url(https://beta.reactjs.org/fonts/Optimistic_Display_W_Md.woff2) format("woff2");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap
+    }
+
+    @font-face {
+        font-family: Optimistic Display;
+        src: url(https://beta.reactjs.org/fonts/Optimistic_Display_W_Bd.woff2) format("woff2");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap
+    }
+
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        font-family: 'Optimistic Display';
+        color: #171717;
+        line-height: 1.5;
+    }
+
+    a {
+        color: #171717;
+    }
+
+    .logo img {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* .main {} */
+
+    .headerSection {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1024px;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .logoAndMenu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .logo div {
+        font-size: 24px;
+        font-weight: 500;
+        margin-left: 4px;
+    }
+
+    .navigation {
+        display: flex;
+        margin-left: 64px;
+        align-items: center;
+    }
+
+    .navigation a {
+        text-decoration: none;
+        margin-right: 36px;
+    }
+
+    .navigation a:hover {
+        text-decoration: underline;
+        text-underline-offset: 6px;
+    }
+
+    .headerCTAs {
+        display: flex;
+        padding-right: 24px;
+        align-items: center;
+    }
+
+    .headerCTAs a {
+        text-decoration: none;
+        margin-left: 36px;
+    }
+
+    .headerCTAs a.btnGetStarted {
+        background-color: rgb(85, 0, 255);
+        color: #FFF;
+        padding: 6px 12px;
+        border-radius: 6px;
+    }
+
+    .headerCTAs a.btnGetStarted:hover {
+        text-decoration: none;
+        background-color: rgb(247, 0, 255);
+    }
+
+    .headerCTAs a:hover {
+        text-decoration: underline;
+        text-underline-offset: 6px;
+    }
+
+    .mainSection {
+        text-align: center;
+        max-width: 1024px;
+        padding: 0 24px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 48px;
+    }
+
+    .mainSection h1 {
+        font-size: 36px;
+        margin: 72px 24px 48px;
+    }
+
+    .mainCtaContainer a {
+        margin-top: 36px;
+    }
+
+    .mainCtaContainer a {
+        background-color: rgb(85, 0, 255);
+        color: #FFF;
+        padding: 6px 12px;
+        border-radius: 6px;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .mainCtaContainer a:hover {
+        background-color: rgb(247, 0, 255);
+    }
+
+    .featuresSection {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 48px;
+        background-color: rgba(85, 0, 255, 0.1);
+    }
+
+    .features {
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 24px;
+        padding-bottom: 48px;
+        text-align: center;
+    }
+
+    .featuresTitle {
+        margin: 12px;
+    }
+
+    .featuresDescription {
+        margin: 24px 24px 36px;
+    }
+
+    .featureCards {
+        display: flex;
+    }
+
+    .featureCards>div {
+        border: 1px solid rgba(85, 0, 255, 0.300);
+        background-color: white;
+        border-radius: 12px;
+        padding: 18px;
+    }
+
+    .featureCards>div:not(:last-child) {
+        margin-right: 24px;
+    }
+
+
+    .featureTitle {
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 12px;
+        color: rgb(85, 0, 255);
+    }
+
+    .featureDescription {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .faqSection {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 48px;
+        max-width: 1024px;
+        text-align: center;
+    }
+
+    .faqTitle {
+        font-weight: bold;
+        margin-bottom: 24px;
+    }
+
+    .faqs {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin: 0 24px;
+    }
+
+    .faq {
+        border: 1px solid rgba(85, 0, 255, 0.300);
+        border-radius: 12px;
+        padding: 18px;
+        margin-bottom: 24px;
+    }
+
+    .faqQuestion {
+        font-weight: bold;
+    }
+
+    .subSection {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 48px;
+        background-color: rgba(85, 0, 255, 0.1);
+    }
+
+    .subArea {
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        text-align: center;
+    }
+
+    .subSectionDescription {
+        margin-bottom: 24px;
+        margin-top: 24px;
+    }
+
+    .btnLaunchWizard {
+        background-color: rgb(85, 0, 255);
+        color: #FFF;
+        padding: 6px 12px;
+        border-radius: 6px;
+        display: inline-block;
+        text-decoration: none;
+        margin-top: 12px;
+    }
+
+    .btnLaunchWizard:hover {
+        background-color: rgb(247, 0, 255);
+    }
+
+    .footerSection {
+        text-align: center;
+        max-width: 1024px;
+        padding: 0 24px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 48px;
+    }
+
+    .footerLinksArea a {
+        padding: 24px 18px;
+    }
+
+    .footerLinksArea a:not(:last-child) {
+        margin-right: 12px;
+    }
+
+    .footerBottomArea {
+        margin-top: 36px;
+        margin-bottom: 48px;
+        font-size: 12px;
+    }
+
+    .mobileMenuMask {
+        display: none;
+    }
+
+    .menuButton {
+        display: none;
+    }
+
+    @media (max-width:800px) {
+
+        .menuButton {
+            display: block;
+        }
+
+        .navigation {
+            display: none;
+        }
+
+        .header {
+            position: relative;
+            align-items: center;
+        }
+
+        .headerCTAs {
+            display: none;
+        }
+
+        .mobileMenuMask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            z-index: 1;
+            margin-top: 48px;
+            border: 1px solid rgba(85, 0, 255, 0.300);
+            border-radius: 6px;
+        }
+
+        .mobileMenu {
+            background-color: #FFF;
+            display: flex;
+            flex-direction: column;
+            padding: 12px 24px 24px 24px;
+        }
+
+        .mobileMenu a {
+            display: block;
+            width: 100%;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        .mobileMenu a.btnGetStarted {
+            background-color: rgb(85, 0, 255);
+            color: #FFF;
+            padding: 6px 12px;
+            border-radius: 6px;
+            width: fit-content;
+            margin-top: 12px;
+            text-decoration: none;
+        }
+
+        .mobileMenu a.btnGetStarted:hover {
+            background-color: rgb(247, 0, 255);
+        }
+
+        .svgCloseMenu {
+            display: none;
+        }
+
+        .menuOpen .mobileMenuMask {
+            display: block;
+        }
+
+        .menuOpen .svgCloseMenu {
+            display: block;
+        }
+
+        .menuOpen .svgOpenMenu {
+            display: none;
+        }
+
+        .mainSection h1 {
+            margin: 0px 24px 48px
+        }
+
+        .mainSection {
+            margin-top: 0;
+        }
+
+        .featureCards {
+            flex-direction: column;
+        }
+
+        .featureCards>div {
+            width: 100%;
+        }
+
+        .featureCards>div:not(:last-child) {
+            margin-bottom: 24px;
+        }
+
+    }
+</style>
+
+<body>
+    <div class="body">
+        <div class="main">
+            <div class="headerSection">
+                <div class="header">
+                    <div class="logoAndMenu">
+                        <a href="/" class="logo">
+                            <img alt="Buildweb Logo" src="/assets/img/logo.svg">
+                            <div>Buildweb</div>
+                        </a>
+                        <div class="navigation">
+                            <a href="#features">Features</a>
+                            <a href="#faq">FAQ</a>
+                            <a href="https://blog.buildweb.io">Blog</a>
+                            <a href="mailto:hello@buildweb.io">Contact</a>
+                        </div>
+                    </div>
+
+                    <div class="headerCTAs">
+                        <a target="_blank" href="https://dashboard.buildweb.io/Account/Login">Login</a>
+                        <a class="btnGetStarted" target="_blank" href="https://dashboard.buildweb.io/Account/Signup">Get
+                            Started</a>
+                    </div>
+                    <div class="menuButton">
+                        <a title="Open mobile navigation" id="btnMenu" href="#">
+                            <svg class="svgOpenMenu" width="24" height="15" viewBox="0 0 24 15">
+                                <title>Open mobile navigation</title>
+                                <g fill="#000" fill-rule="evenodd">
+                                    <rect y="12" width="18" height="3" rx="1"></rect>
+                                    <rect y="6" width="21" height="3" rx="1"></rect>
+                                    <rect width="24" height="3" rx="1"></rect>
+                                </g>
+                            </svg>
+                            <svg class="svgCloseMenu" width="24" height="24" viewBox="0 0 24 24">
+                                <title>Close mobile navigation</title>
+                                <g transform="matrix(0 0 0 0 0 0)" id="f64ea61d-2965-47d2-8336-c91ce6e71763">
+                                </g>
+                                <g transform="matrix(1 0 0 1 12 12)" id="32489dee-f70b-42ed-a80f-b7c3d3190750">
+                                    <rect style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1; visibility: hidden;"
+                                          vector-effect="non-scaling-stroke" x="-12" y="-12" rx="0" ry="0" width="24"
+                                          height="24" />
+                                </g>
+                                <g transform="matrix(1.81 0 0 1.81 11.97 11.97)">
+                                    <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0, 0, 0); fill-rule: evenodd; opacity: 1;"
+                                          transform=" translate(-19.95, -19.95)"
+                                          d="M 25.6 14.3 C 25.981142876194287 14.68884351019864 25.981142876194287 15.311156489801363 25.6 15.700000000000001 L 21.36 19.950000000000003 L 25.61 24.190000000000005 C 26.002122172379863 24.58212217237987 26.002122172379863 25.217877827620143 25.61 25.610000000000007 C 25.217877827620136 26.00212217237987 24.58212217237986 26.00212217237987 24.189999999999998 25.610000000000007 L 19.949999999999996 21.360000000000007 L 15.709999999999996 25.610000000000007 C 15.317877827620132 26.00212217237987 14.682122172379858 26.00212217237987 14.289999999999996 25.610000000000007 C 13.897877827620132 25.217877827620143 13.897877827620132 24.58212217237987 14.289999999999996 24.190000000000005 L 18.539999999999996 19.950000000000003 L 14.289999999999996 15.710000000000003 C 13.897877827620132 15.317877827620139 13.897877827620132 14.682122172379866 14.289999999999996 14.290000000000003 C 14.68212217237986 13.897877827620139 15.317877827620132 13.897877827620139 15.709999999999996 14.290000000000003 L 19.949999999999996 18.540000000000003 L 24.189999999999998 14.290000000000003 C 24.377766599905552 14.100687349176905 24.63336246362944 13.994201675658331 24.9 13.994201675658331 C 25.16663753637056 13.994201675658331 25.42223340009444 14.100687349176905 25.61 14.290000000000003 z"
+                                          stroke-linecap="round" />
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="mobileMenuMask">
+                        <div class="mobileMenu">
+                            <a href="#features">Features</a>
+                            <a href="#faq">FAQ</a>
+                            <a href="https://blog.buildweb.io">Blog</a>
+                            <a href="mailto:hello@buildweb.io">Contact</a>
+                            <a target="_blank" href="https://dashboard.buildweb.io/Account/Login">Login</a>
+                            <a class="btnGetStarted" target="_blank"
+                               href="https://dashboard.buildweb.io/Account/Signup">Get
+                                Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mainSection">
+                <h1>Create SEO-Perfect Website with AI-Powered Technology</h1>
+                <div class="descriptiveText">
+                    Quickly and easily create an SEO-friendly website that is optimized for top SEO best practices and
+                    highest possible page speed, ensuring your website ranks well in organic search. Automate content
+                    creation and editing with AI support for an effortless website building experience.
+                </div>
+                <div class="mainCtaContainer">
+                    <a target="_blank" href="https://dashboard.buildweb.io/Account/Signup">Get Started Now</a>
+                </div>
+            </div>
+            <div id="features" class="featuresSection">
+                <div class="features">
+                    <h2 class="featuresTitle">
+                        Explore Features
+                    </h2>
+                    <div class="featuresDescription">
+                        Create the perfect website for your business with ease. Our AI-powered technology provides the
+                        ultimate
+                        solution to your website building needs.
+                    </div>
+                    <div class="featureCards">
+                        <div>
+                            <div class="featureTitle">Built-in Technical SEO</div>
+                            <div class="featureDescription">Our system is optimized for SEO best practices. Don't think
+                                about
+                                canonical, sitemap.xml, robots.txt.. They're done already!</div>
+                        </div>
+                        <div>
+                            <div class="featureTitle">Fastest Page Load</div>
+                            <div class="featureDescription">Blazing Fast Pagespeed! Your website will load in
+                                miliseconds.
+                                It's
+                                essential for both user experience and search engine crawlers. </div>
+                        </div>
+                        <div>
+                            <div class="featureTitle">AI Powered Content Editor</div>
+                            <div class="featureDescription">Just enter the title of the article and system creates the
+                                article
+                                in seconds. You just review the draft and publish. That's all.</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="faq" class="faqSection">
+                <h2 class="faqTitle">Frequently Asked Questions</h2>
+                <div class="faqs">
+                    <div class="faq">
+                        <div class="faqQuestion">Can I use my own domain?</div>
+                        <div class="faqAnswer">Yes you can use your own domain. Please go to dashboard and click "Domain
+                            Settings".
+                            On Domain Settings page, click "Custom Domain" and enter your domain address. Then follow
+                            the
+                            instructions on the page for DNS settings.</div>
+                    </div>
+                    <div class="faq">
+                        <div class="faqQuestion">Is this service free?</div>
+                        <div class="faqAnswer">Our AI-powered website builder is currently available free of charge as
+                            for early joiners. Sign up now and
+                            take advantage of this unique opportunity to create an SEO-friendly website with ease!</div>
+                    </div>
+                    <div class="faq">
+                        <div class="faqQuestion">How fast will my website be?</div>
+                        <div class="faqAnswer">Your website will be blazing fast! Our system is optimized for the
+                            highest possible page speed, ensuring your website ranks well in organic
+                            search. Test your website speed with Google Pagespeed Insights and you can expect scores of
+                            over 90.</div>
+                    </div>
+                    <div class="faq">
+                        <div class="faqQuestion">How does AI support content creation?</div>
+                        <div class="faqAnswer">With our AI-powered technology, content creation and editing is
+                            effortless. Simply enter your article idea and our AI will generate titles, descriptions,
+                            content, and select images for you. Get started today and experience the power of AI-driven
+                            content creation!</div>
+                    </div>
+                </div>
+            </div>
+            <div class="subSection">
+                <div class="subArea">
+                    <h2 class="subSectionTitle">Ready to Start?<br />(It will take ∼3 minutes to publish your new
+                        website)
+                    </h2>
+                    <div class="subSectionDescription">Get started today with our AI-powered website builder and start
+                        creating
+                        an SEO-friendly website that is optimized for top SEO best practices and highest possible page
+                        speed.
+                        Try it now and see the results!</div>
+                    <div>
+                        <a target="_blank" href="https://dashboard.buildweb.io/Account/Signup"
+                           class="btnLaunchWizard">Launch Wizard</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footerSection">
+                <div class="footerLinksArea">
+                    <div>
+                        <div class="columnTitle"></div>
+                        <a href="#features">Features</a>
+                        <a href="#faq">FAQ</a>
+                        <a href="https://blog.buildweb.io">Blog</a>
+                        <a href="mailto:hello@buildweb.io">Contact</a>
+                    </div>
+                </div>
+                <div class="footerBottomArea">
+                    <div class="copyrightText">Copyright © 2023 Buildweb.io. All rights reserved.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        document.getElementById("btnMenu").addEventListener("click", function (e) {
+            var header = document.getElementsByClassName('header')[0];
+
+            var isMenuOpen = header.classList.contains("menuOpen");
+            if(isMenuOpen) {
+                header.classList.remove("menuOpen");
+            } else {
+                header.classList.add("menuOpen");
+            }
+            e.preventDefault();
+            return false;
+
+        }, false);
+    </script>
+
+</body>
+
+</html>
